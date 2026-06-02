@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node *)",
+      "PowerShell(New-Item *)",
+      "PowerShell(Get-ChildItem *)"
+    ]
+  }
+}
