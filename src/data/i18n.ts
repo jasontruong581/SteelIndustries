@@ -7,6 +7,8 @@ export const translations = {
       products: 'Sản phẩm',
       about: 'Về chúng tôi',
       contact: 'Liên hệ',
+      menu: 'Mở menu',
+      close_menu: 'Đóng menu',
     },
     hero: {
       heading: 'K&C\nThép chất lượng\nquốc tế',
@@ -21,6 +23,7 @@ export const translations = {
       body1: 'K&C được thành lập với sứ mệnh mang đến nguồn thép chất lượng quốc tế, đáng tin cậy cho thị trường Việt Nam. Chúng tôi chuyên cung cấp các sản phẩm thép cán nguội, cán nóng và tôn lạnh đáp ứng các tiêu chuẩn JIS, ASTM và EN.',
       body2: 'Với đội ngũ chuyên nghiệp và hệ thống phân phối rộng khắp, K&C cam kết giao hàng đúng hạn, đúng quy cách và cạnh tranh về giá.',
       learn_more: 'Tìm hiểu thêm',
+      image_alt: 'Hình ảnh nhà máy và kho thép K&C',
     },
     featured: {
       heading: 'Sản phẩm nổi bật',
@@ -30,11 +33,13 @@ export const translations = {
       heading: 'Liên hệ với chúng tôi',
       sub: 'Đội ngũ K&C luôn sẵn sàng tư vấn và hỗ trợ bạn.',
       address_label: 'Địa chỉ',
-      address_val: 'Địa chỉ công ty (sẽ cập nhật)',
+      address_val: '66 đường số 6, Phường Hiệp Bình, TPHCM',
       phone_label: 'Điện thoại',
-      phone_val: '+84 xxx xxx xxx',
+      phone_val: '0902351396',
       email_label: 'Email',
-      email_val: 'contact@kcsteel.vn',
+      email_val: 'ctykc@gmail.com',
+      map_embed_title: 'Bản đồ vị trí K&C Steel',
+      view_map: 'Mở trên Google Maps',
     },
     products_page: {
       heading: 'Sản phẩm',
@@ -45,7 +50,7 @@ export const translations = {
     },
     about_page: {
       hero_heading: 'Về K&C',
-      hero_sub: 'Chất lượng – Uy tín – Bền vững',
+      hero_sub: 'Chất lượng - Uy tín - Bền vững',
       story_heading: 'Câu chuyện của chúng tôi',
       story_body1: 'K&C được thành lập bởi những chuyên gia có nhiều năm kinh nghiệm trong ngành thép. Chúng tôi hiểu rằng chất lượng vật liệu ảnh hưởng trực tiếp đến độ bền và an toàn của từng công trình.',
       story_body2: 'Từ những ngày đầu, K&C đã xây dựng hệ thống kiểm soát chất lượng nghiêm ngặt, làm việc trực tiếp với các nhà máy thép hàng đầu châu Á để mang đến sản phẩm đạt chuẩn quốc tế.',
@@ -60,10 +65,14 @@ export const translations = {
       stats_partners: 'Đối tác',
       stats_provinces: 'Tỉnh thành',
       team_heading: 'Đội ngũ lãnh đạo',
+      company_image_alt: 'Đội ngũ và năng lực vận hành của K&C',
     },
     footer: {
-      copy: '© 2024 K&C Steel. Bảo lưu mọi quyền.',
+      copy: '© 2026 K&C Steel. Bảo lưu mọi quyền.',
       tagline: 'Thép chất lượng quốc tế.',
+    },
+    product: {
+      image_alt: 'Hình ảnh sản phẩm',
     },
   },
   en: {
@@ -72,6 +81,8 @@ export const translations = {
       products: 'Products',
       about: 'About',
       contact: 'Contact',
+      menu: 'Open menu',
+      close_menu: 'Close menu',
     },
     hero: {
       heading: 'K&C\nInternational\nSteel Quality',
@@ -86,6 +97,7 @@ export const translations = {
       body1: 'K&C was founded with the mission to bring international-grade, reliable steel to the Vietnamese market. We specialize in cold-rolled, hot-rolled steel and galvanized sheets that meet JIS, ASTM and EN standards.',
       body2: 'With a professional team and wide distribution network, K&C is committed to on-time delivery, correct specifications and competitive pricing.',
       learn_more: 'Learn More',
+      image_alt: 'K&C steel facility and warehouse',
     },
     featured: {
       heading: 'Featured Products',
@@ -95,11 +107,13 @@ export const translations = {
       heading: 'Contact Us',
       sub: 'The K&C team is ready to advise and support you.',
       address_label: 'Address',
-      address_val: 'Company address (to be updated)',
+      address_val: '66 Duong so 6, Hiep Binh Ward, Ho Chi Minh City',
       phone_label: 'Phone',
-      phone_val: '+84 xxx xxx xxx',
+      phone_val: '0902351396',
       email_label: 'Email',
-      email_val: 'contact@kcsteel.vn',
+      email_val: 'ctykc@gmail.com',
+      map_embed_title: 'K&C Steel location map',
+      view_map: 'Open in Google Maps',
     },
     products_page: {
       heading: 'Products',
@@ -110,7 +124,7 @@ export const translations = {
     },
     about_page: {
       hero_heading: 'About K&C',
-      hero_sub: 'Quality – Integrity – Sustainability',
+      hero_sub: 'Quality - Integrity - Sustainability',
       story_heading: 'Our Story',
       story_body1: 'K&C was founded by experts with years of experience in the steel industry. We understand that material quality directly affects the durability and safety of every project.',
       story_body2: 'From the start, K&C has built a rigorous quality control system, working directly with leading Asian steel mills to deliver internationally-certified products.',
@@ -125,10 +139,14 @@ export const translations = {
       stats_partners: 'Partners',
       stats_provinces: 'Provinces',
       team_heading: 'Leadership Team',
+      company_image_alt: 'K&C team and operating capability',
     },
     footer: {
-      copy: '© 2024 K&C Steel. All rights reserved.',
+      copy: '© 2026 K&C Steel. All rights reserved.',
       tagline: 'International Steel Quality.',
+    },
+    product: {
+      image_alt: 'Product image',
     },
   },
 } as const

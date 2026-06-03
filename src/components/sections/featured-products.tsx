@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { products } from '@/data/products'
 import { ProductCard } from '@/components/product-card'
+import { RevealOnScroll } from '@/components/ui/reveal-on-scroll'
 import type { LangContextValue } from '@/hooks/use-lang'
 
 interface FeaturedProductsProps {
@@ -22,13 +23,15 @@ export function FeaturedProducts({ langCtx }: FeaturedProductsProps) {
             to="/products"
             className="text-blue-700 dark:text-blue-400 font-medium hover:underline shrink-0"
           >
-            {t('featured', 'view_all')} →
+            {t('featured', 'view_all')} -&gt;
           </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {featured.map(p => (
-            <ProductCard key={p.id} product={p} lang={lang} />
+          {featured.map((product, index) => (
+            <RevealOnScroll key={product.id} delayMs={index * 90} yOffset={18}>
+              <ProductCard product={product} lang={lang} />
+            </RevealOnScroll>
           ))}
         </div>
       </div>

@@ -7,24 +7,16 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product, lang }: ProductCardProps) {
+  const imageAlt = `${lang === 'vi' ? 'Hình ảnh' : 'Image'} ${product.name[lang]}`
+
   return (
     <div className="group bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow duration-300">
-      {/* Image placeholder */}
-      <div className="h-48 bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-700 dark:to-slate-600 flex items-center justify-center">
-        <svg
-          className="w-16 h-16 text-slate-300 dark:text-slate-500"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={1}
-            d="M4 6h16M4 10h16M4 14h16M4 18h16"
-          />
-        </svg>
+      <div className="h-48 overflow-hidden bg-slate-100 dark:bg-slate-700">
+        <img
+          src={product.image}
+          alt={imageAlt}
+          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+        />
       </div>
 
       <div className="p-6">

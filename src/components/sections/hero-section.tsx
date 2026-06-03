@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AnimatedHeading } from '@/components/ui/animated-heading'
 import { FadeIn } from '@/components/ui/fade-in'
@@ -13,6 +14,7 @@ interface HeroSectionProps {
 export function HeroSection({ langCtx }: HeroSectionProps) {
   const { t } = langCtx
   const navigate = useNavigate()
+  const [videoReady, setVideoReady] = useState(false)
 
   const handleContact = () =>
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
@@ -21,25 +23,34 @@ export function HeroSection({ langCtx }: HeroSectionProps) {
 
   return (
     <section className="relative w-full h-screen overflow-hidden bg-slate-900">
-      {/* Raw video background — no overlay */}
+      <img
+        src="/hero-poster.jpg"
+        alt=""
+        aria-hidden="true"
+        className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
+          videoReady ? 'opacity-0' : 'opacity-100'
+        }`}
+      />
+
       <video
-        className="absolute inset-0 w-full h-full object-cover"
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
+          videoReady ? 'opacity-100' : 'opacity-0'
+        }`}
         src={VIDEO_URL}
         autoPlay
         loop
         muted
         playsInline
+        preload="auto"
         poster="/hero-poster.jpg"
+        onLoadedData={() => setVideoReady(true)}
         aria-hidden="true"
       />
 
-      {/* Content layer */}
       <div className="absolute inset-0 flex flex-col px-6 md:px-12 lg:px-16 pt-6">
-        {/* Spacer pushes content to bottom */}
         <div className="flex-1" />
 
         <div className="lg:grid lg:grid-cols-2 lg:items-end pb-12 lg:pb-16">
-          {/* Left — main content */}
           <div>
             <AnimatedHeading
               text={t('hero', 'heading')}
@@ -73,7 +84,6 @@ export function HeroSection({ langCtx }: HeroSectionProps) {
             </FadeIn>
           </div>
 
-          {/* Right — tag card (lg only) */}
           <FadeIn delay={1400} duration={1000} className="hidden lg:flex items-end justify-end mt-4 lg:mt-0">
             <div className="liquid-glass border border-white/20 px-6 py-3 rounded-xl">
               <p className="text-lg md:text-xl lg:text-2xl font-light text-white">

@@ -18,21 +18,22 @@ export function AnimatedHeading({
   const [started, setStarted] = useState(false)
 
   useEffect(() => {
-    const t = setTimeout(() => setStarted(true), initialDelay)
-    return () => clearTimeout(t)
+    const timer = window.setTimeout(() => setStarted(true), initialDelay)
+    return () => window.clearTimeout(timer)
   }, [initialDelay])
 
   const lines = text.split('\n')
 
   return (
     <h1 className={className} style={style}>
-      {lines.map((line, li) => (
-        <span key={li} className="block">
-          {line.split('').map((ch, ci) => {
-            const delay = started ? (li * line.length + ci) * charDelay : 0
+      {lines.map((line, lineIndex) => (
+        <span key={lineIndex} className="block">
+          {line.split('').map((character, characterIndex) => {
+            const delay = started ? (lineIndex * line.length + characterIndex) * charDelay : 0
+
             return (
               <span
-                key={ci}
+                key={characterIndex}
                 className="inline-block transition-all duration-500"
                 style={{
                   opacity: started ? 1 : 0,
@@ -40,7 +41,7 @@ export function AnimatedHeading({
                   transitionDelay: `${delay}ms`,
                 }}
               >
-                {ch === ' ' ? ' ' : ch}
+                {character === ' ' ? '\u00A0' : character}
               </span>
             )
           })}

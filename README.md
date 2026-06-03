@@ -1,73 +1,53 @@
-# React + TypeScript + Vite
+# K&C Steel Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Website giới thiệu công ty K&C Steel, xây bằng React + Vite + TypeScript với giao diện song ngữ Việt/Anh, dark mode và dữ liệu sản phẩm hard-code.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 19
+- Vite 8
+- TypeScript 6
+- React Router 7
+- Tailwind CSS 4
 
-## React Compiler
+## Pages
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `/`: hero video, giới thiệu ngắn, sản phẩm nổi bật, contact
+- `/products`: danh sách sản phẩm với filter theo nhóm
+- `/about`: câu chuyện công ty, giá trị cốt lõi, stats, team
 
-## Expanding the ESLint configuration
+## Assets
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Ảnh công ty: `public/Company.jpg`
+- Ảnh sản phẩm: `public/Product_1.jpg` đến `public/Product_3.jpg`
+- Favicon và icon phụ: thư mục `public/`
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Development
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Cài dependency:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Chạy local:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+Build production:
+
+```bash
+npm run build
+```
+
+Lint:
+
+```bash
+npm run lint
+```
+
+## Deployment
+
+Repo đã có `vercel.json` để rewrite tất cả route SPA về `index.html`, nên có thể deploy static lên Vercel mà không bị lỗi route trực tiếp.
