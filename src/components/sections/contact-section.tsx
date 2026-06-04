@@ -4,14 +4,13 @@ interface ContactSectionProps {
   langCtx: LangContextValue
 }
 
-const MAP_EMBED_SRC =
-  'https://maps.google.com/maps?q=10.8269457,106.7292379&t=&z=19&ie=UTF8&iwloc=&output=embed'
-const MAP_LINK =
-  'https://www.google.com/maps/place/Happy+Time/@10.8270563,106.7292562,19z/data=!4m15!1m8!3m7!1s0x317528874c3684c9:0x4def77e274d8a6aa!2zNjYgxJDGsOG7nW5nIFPhu5EgNiwga2h1IHBo4buRIDIsIEhp4buHcCBCw6xuaCwgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!3b1!8m2!3d10.8308595!4d106.717155!16s%2Fg%2F11lwgztqh3!3m5!1s0x3175262bf6089517:0x285e6a8343a7ab7f!8m2!3d10.8269457!4d106.7292379!16s%2Fg%2F11hyld1qd0?entry=ttu&g_ep=EgoyMDI2MDUzMS4wIKXMDSoASAFQAw%3D%3D'
+const MAP_QUERY = '40 Lý Tự Trọng, Phường Vũng Tàu, TP HCM'
+const MAP_EMBED_SRC = `https://maps.google.com/maps?q=${encodeURIComponent(MAP_QUERY)}&t=&z=17&ie=UTF8&iwloc=&output=embed`
+const MAP_LINK = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(MAP_QUERY)}`
 
 function LocationIcon() {
   return (
-    <svg className="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+    <svg className="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
       <path strokeLinecap="round" strokeLinejoin="round" d="M12 21s-6-4.35-6-10a6 6 0 1 1 12 0c0 5.65-6 10-6 10Z" />
       <circle cx="12" cy="11" r="2.5" />
     </svg>
@@ -20,7 +19,7 @@ function LocationIcon() {
 
 function PhoneIcon() {
   return (
-    <svg className="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+    <svg className="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -32,7 +31,7 @@ function PhoneIcon() {
 
 function MailIcon() {
   return (
-    <svg className="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+    <svg className="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
       <rect x="3" y="5" width="18" height="14" rx="2" />
       <path strokeLinecap="round" strokeLinejoin="round" d="m4 7 8 6 8-6" />
     </svg>
@@ -42,10 +41,12 @@ function MailIcon() {
 export function ContactSection({ langCtx }: ContactSectionProps) {
   const { t } = langCtx
 
+  const addressLabel = t('contact', 'address_label')
+
   const items = [
     {
       icon: <LocationIcon />,
-      label: t('contact', 'address_label'),
+      label: addressLabel,
       value: t('contact', 'address_val'),
       href: MAP_LINK,
     },
@@ -81,15 +82,17 @@ export function ContactSection({ langCtx }: ContactSectionProps) {
             <a
               key={item.label}
               href={item.href}
-              target={item.label === t('contact', 'address_label') ? '_blank' : undefined}
-              rel={item.label === t('contact', 'address_label') ? 'noreferrer' : undefined}
-              className="flex flex-col items-center text-center p-8 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 transition-transform duration-300 hover:-translate-y-1"
+              target={item.label === addressLabel ? '_blank' : undefined}
+              rel={item.label === addressLabel ? 'noreferrer' : undefined}
+              className="flex flex-col items-center text-center p-10 md:p-12 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 transition-transform duration-300 hover:-translate-y-1"
             >
-              <span className="mb-4 text-blue-700 dark:text-blue-300" aria-hidden="true">{item.icon}</span>
-              <p className="text-xs font-semibold uppercase tracking-widest text-blue-700 dark:text-blue-400 mb-2">
+              <span className="mb-5 text-blue-700 dark:text-blue-300" aria-hidden="true">{item.icon}</span>
+              <p className="text-sm md:text-base font-semibold uppercase tracking-[0.22em] text-blue-700 dark:text-blue-400 mb-3">
                 {item.label}
               </p>
-              <p className="text-slate-700 dark:text-slate-300 text-sm">{item.value}</p>
+              <p className="text-slate-700 dark:text-slate-300 text-base md:text-xl leading-relaxed max-w-xs">
+                {item.value}
+              </p>
             </a>
           ))}
         </div>

@@ -33,7 +33,7 @@ export const translations = {
       heading: 'Liên hệ với chúng tôi',
       sub: 'Đội ngũ K&C luôn sẵn sàng tư vấn và hỗ trợ bạn.',
       address_label: 'Địa chỉ',
-      address_val: '66 đường số 6, Phường Hiệp Bình, TPHCM',
+      address_val: '40 Lý Tự Trọng, Phường Vũng Tàu, TP HCM',
       phone_label: 'Điện thoại',
       phone_val: '0902351396',
       email_label: 'Email',
@@ -74,6 +74,11 @@ export const translations = {
     product: {
       image_alt: 'Hình ảnh sản phẩm',
     },
+    floating: {
+      call: 'Gọi điện',
+      zalo: 'Mở Zalo',
+      top: 'Lên đầu trang',
+    },
   },
   en: {
     nav: {
@@ -107,7 +112,7 @@ export const translations = {
       heading: 'Contact Us',
       sub: 'The K&C team is ready to advise and support you.',
       address_label: 'Address',
-      address_val: '66 Duong so 6, Hiep Binh Ward, Ho Chi Minh City',
+      address_val: '40 Ly Tu Trong, Vung Tau Ward, Ho Chi Minh City',
       phone_label: 'Phone',
       phone_val: '0902351396',
       email_label: 'Email',
@@ -147,6 +152,11 @@ export const translations = {
     },
     product: {
       image_alt: 'Product image',
+    },
+    floating: {
+      call: 'Call now',
+      zalo: 'Open Zalo',
+      top: 'Back to top',
     },
   },
 } as const

@@ -3,6 +3,7 @@ import { useTheme } from '@/hooks/use-theme'
 import { useLang } from '@/hooks/use-lang'
 import { Navbar } from '@/components/layout/navbar'
 import { Footer } from '@/components/layout/footer'
+import { FloatingActions } from '@/components/ui/floating-actions'
 import { LangContext } from '@/contexts/lang-context'
 import { HomePage } from '@/pages/home-page'
 import { ProductsPage } from '@/pages/products-page'
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="/about" element={<AboutPage langCtx={lang} />} />
         </Routes>
         <Footer langCtx={lang} />
+        <FloatingActions />
       </BrowserRouter>
     </LangContext.Provider>
   )
