@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { BrandLogo } from '@/components/brand-logo'
 import { ThemeToggle } from '@/components/ui/theme-toggle'
 import { LangToggle } from '@/components/ui/lang-toggle'
 import type { LangContextValue } from '@/hooks/use-lang'
@@ -58,8 +59,8 @@ export function Navbar({ dark, onToggleTheme, langCtx }: NavbarProps) {
     <nav className="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 lg:px-16 pt-4">
       <div className={`rounded-xl px-4 py-2.5 ${wrapperStyle}`}>
         <div className="flex items-center justify-between gap-4">
-          <Link to="/" className="text-xl font-semibold tracking-tight">
-            K&amp;C
+          <Link to="/" className="shrink-0">
+            <BrandLogo imgClassName="h-11 w-auto md:h-12" showWordmark />
           </Link>
 
           <div className="hidden md:flex items-center gap-7 text-sm">

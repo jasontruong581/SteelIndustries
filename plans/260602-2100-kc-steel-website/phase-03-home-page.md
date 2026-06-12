@@ -94,7 +94,7 @@ export const products: Product[] = [
 
 ### 2. `src/components/sections/hero-section.tsx`
 
-Spec (exact match to reference, adapted for K&C):
+Spec (exact match to reference, adapted for KLC):
 
 ```tsx
 // Full-screen video bg, liquid-glass navbar overlay, animated heading
@@ -186,3 +186,4 @@ export function HomePage() {
 
 - Video URL is an external CloudFront URL — no sensitive data, public asset.
 - No user input in this phase.
+

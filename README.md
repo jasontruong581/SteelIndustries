@@ -1,6 +1,6 @@
-# K&C Steel Website
+# KLC Steel Website
 
-Website giới thiệu công ty K&C Steel, xây bằng React + Vite + TypeScript với giao diện song ngữ Việt/Anh, dark mode và dữ liệu sản phẩm hard-code.
+Website giới thiệu công ty KLC Steel, xây bằng React + Vite + TypeScript với giao diện song ngữ Việt/Anh, dark mode và dữ liệu sản phẩm hard-code.
 
 ## Tech Stack
 

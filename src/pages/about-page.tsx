@@ -146,7 +146,7 @@ export function AboutPage({ langCtx }: AboutPageProps) {
                 <RevealOnScroll key={member.name} delayMs={index * 90} yOffset={18}>
                   <div className="text-center rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 p-8">
                     <div className="w-24 h-24 rounded-full bg-slate-200 dark:bg-slate-700 mx-auto mb-4 flex items-center justify-center text-xs font-semibold uppercase tracking-[0.25em] text-slate-500">
-                      K&C
+                      KLC
                     </div>
                     <p className="font-semibold text-slate-900 dark:text-white">{member.name}</p>
                     <p className="text-sm text-slate-500 dark:text-slate-400">{member.title}</p>

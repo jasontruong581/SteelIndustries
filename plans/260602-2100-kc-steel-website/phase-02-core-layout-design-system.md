@@ -59,26 +59,26 @@ export const translations = {
   vi: {
     nav: { home: 'Trang chủ', products: 'Sản phẩm', about: 'Về chúng tôi', contact: 'Liên hệ' },
     hero: {
-      heading: 'K&C\nThép chất lượng quốc tế',
+      heading: 'KLC\nThép chất lượng quốc tế',
       sub: 'Cung cấp thép cán nguội, cán nóng và tôn lạnh đạt chuẩn quốc tế cho mọi công trình.',
       cta1: 'Xem sản phẩm', cta2: 'Liên hệ ngay',
     },
-    about: { title: 'Về K&C', sub: 'Chúng tôi tự hào...' },
+    about: { title: 'Về KLC', sub: 'Chúng tôi tự hào...' },
     products: { title: 'Sản phẩm', filter_all: 'Tất cả' },
     contact: { title: 'Liên hệ', address: 'Địa chỉ', phone: 'Điện thoại', email: 'Email' },
-    footer: { copy: '© 2024 K&C Steel. Bảo lưu mọi quyền.' },
+    footer: { copy: '© 2024 KLC Steel. Bảo lưu mọi quyền.' },
   },
   en: {
     nav: { home: 'Home', products: 'Products', about: 'About', contact: 'Contact' },
     hero: {
-      heading: 'K&C\nInternational Steel Quality',
+      heading: 'KLC\nInternational Steel Quality',
       sub: 'Supplying cold-rolled, hot-rolled steel and international-grade galvanized sheets for every project.',
       cta1: 'View Products', cta2: 'Contact Us',
     },
-    about: { title: 'About K&C', sub: 'We take pride...' },
+    about: { title: 'About KLC', sub: 'We take pride...' },
     products: { title: 'Products', filter_all: 'All' },
     contact: { title: 'Contact', address: 'Address', phone: 'Phone', email: 'Email' },
-    footer: { copy: '© 2024 K&C Steel. All rights reserved.' },
+    footer: { copy: '© 2024 KLC Steel. All rights reserved.' },
   },
 }
 ```
@@ -184,7 +184,7 @@ Sun/moon icon button. Calls `dark ? '🌙' : '☀️'` or use lucide-react icons
 
 - In dark mode (hero page): `.liquid-glass` + `rounded-xl` + `px-4 py-2`
 - In light mode (inner pages): `bg-white shadow-sm`
-- Left: `K&C` text logo (link to `/`)
+- Left: `KLC` text logo (link to `/`)
 - Center (md+): nav links from `t('nav.*')`
 - Right: `ThemeToggle` + `LangToggle` + optional CTA button
 
@@ -241,3 +241,4 @@ export default function App() {
 ## Security Considerations
 
 No external data, no user input — no security concerns at this phase.
+

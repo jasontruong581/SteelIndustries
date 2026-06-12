@@ -1,7 +1,7 @@
 ---
-title: K&C Steel Company Website
+title: KLC Steel Company Website
 description: >-
-  3-page bilingual (Vi/En) company intro website for K&C steel company using
+  3-page bilingual (Vi/En) company intro website for KLC steel company using
   React, Vite, TypeScript, Tailwind CSS, dark mode, and a liquid-glass-inspired UI.
 status: completed
 priority: P2
@@ -20,11 +20,11 @@ createdBy: 'ck:plan'
 source: skill
 ---
 
-# K&C Steel Company Website
+# KLC Steel Company Website
 
 ## Overview
 
-Build a professional 3-page bilingual (Vi/En) company introduction website for K&C, a steel industry company. The site includes dark/light mode, simple local i18n, and image-backed product/company sections.
+Build a professional 3-page bilingual (Vi/En) company introduction website for KLC, a steel industry company. The site includes dark/light mode, simple local i18n, and image-backed product/company sections.
 
 **Brainstorm report:** `../reports/brainstorm-260602-2100-kc-steel-website-design-report.md`
 
@@ -53,4 +53,5 @@ Build a professional 3-page bilingual (Vi/En) company introduction website for K
 
 - Replace placeholder contact details with final address and phone
 - Replace placeholder leadership names/titles with real team information
-- Expand product catalog if K&C needs more than the current featured set
+- Expand product catalog if KLC needs more than the current featured set
+

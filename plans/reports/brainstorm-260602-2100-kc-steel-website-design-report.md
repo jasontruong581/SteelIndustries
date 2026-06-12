@@ -1,4 +1,4 @@
-# Brainstorm Report — K&C Steel Website Design
+# Brainstorm Report — KLC Steel Website Design
 
 **Date:** 2026-06-02  
 **Status:** Approved, ready for planning
@@ -7,7 +7,7 @@
 
 ## Problem Statement
 
-Build a professional company introduction website for K&C (steel industry), 3 pages, bilingual Vi/En, modern steel-themed design with dark mode.
+Build a professional company introduction website for KLC (steel industry), 3 pages, bilingual Vi/En, modern steel-themed design with dark mode.
 
 ## Requirements
 
@@ -91,4 +91,5 @@ All files ≤200 lines.
 - Final product list and categories
 - Real company content (address, phone, email, team, story)
 - Real hero video / product images
-- Logo: text "K&C" or SVG logo?
+- Logo: text "KLC" or SVG logo?
+

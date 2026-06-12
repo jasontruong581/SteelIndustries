@@ -41,7 +41,7 @@ Structure (all sections in one file ≤200 lines):
 ```tsx
 // Section 1 — Hero banner
 //   bg: gradient steel blue to dark, text white
-//   Heading: "Về K&C / About K&C"
+//   Heading: "Về KLC / About KLC"
 //   Sub: company tagline placeholder
 
 // Section 2 — Company Story
@@ -68,9 +68,9 @@ Structure (all sections in one file ≤200 lines):
 Add keys:
 ```ts
 about: {
-  hero_heading: { vi: 'Về K&C', en: 'About K&C' },
+  hero_heading: { vi: 'Về KLC', en: 'About KLC' },
   story_heading: { vi: 'Câu chuyện của chúng tôi', en: 'Our Story' },
-  story_body: { vi: 'K&C được thành lập...', en: 'K&C was founded...' },
+  story_body: { vi: 'KLC được thành lập...', en: 'KLC was founded...' },
   mission: { vi: 'Sứ mệnh', en: 'Mission' },
   vision: { vi: 'Tầm nhìn', en: 'Vision' },
   values: { vi: 'Giá trị cốt lõi', en: 'Core Values' },
@@ -89,3 +89,4 @@ about: {
 ## Risk Assessment
 
 Low risk — purely presentational, no data fetching.
+
